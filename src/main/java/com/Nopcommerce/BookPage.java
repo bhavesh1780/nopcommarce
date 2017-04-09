@@ -18,5 +18,7 @@ public class BookPage extends Utils {
         clickOnElement(By.id("add-to-cart-button-37"));
         //To clear click on Message Displayed on top of the page Product added to Shopping cart
         clickOnElement(By.xpath("//body/div[5]/span"));
+        //Click on Shopping Cart to go to shopping cart
+        clickOnElement(By.linkText("shopping cart"));
     }
 }

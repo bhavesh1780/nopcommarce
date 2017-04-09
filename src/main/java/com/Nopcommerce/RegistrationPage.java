@@ -2,9 +2,6 @@ package com.Nopcommerce;
 
 import org.openqa.selenium.By;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 /**
  * Created by Dell on 08/04/2017.
  */
@@ -22,11 +19,8 @@ public class RegistrationPage extends Utils {
         selectIndex(By.name("DateOfBirthMonth"), 1);
         selectText(By.name("DateOfBirthYear"),"1978");
         // Creating timestamp for everytime new UNIQUE email address
-        Date date = new Date();
-        SimpleDateFormat x = new SimpleDateFormat("ddmmyyhhss");
-        String y = x.format(date);
-        // Concatinating the timestamp with email address
-        String email = "xyz"+y+"@gmail.com";
+       // Concatinating the timestamp with email address
+        String email = "xyz"+dateStamp()+"@gmail.com";
         // Sending email into Email address box
         typeText(By.xpath("//input[@id=\"Email\"]"), email);
         System.out.println(email);

@@ -13,10 +13,11 @@ public class TestSuit extends BaseTest {
     RegistrationPage registrationPage = new RegistrationPage();
     LoginPage loginPage = new LoginPage();
     BookPage bookPage = new BookPage();
+    CartPage cartPage = new CartPage();
 
 
     @Test
-    public void userShoulsAbleToRegisterSuccessfullyAndLoginSuccessfully(){
+    public void userShouldAbleToRegisterSuccessfullyAndLoginSuccessfully(){
           homePage.clickOnRegisterButton();
           registrationPage.registerNewUSer();
           Assert.assertEquals("Your registration completed", Utils.getTextFromElement(By.className("result")) );
@@ -27,6 +28,13 @@ public class TestSuit extends BaseTest {
     public void userShouldAbleToPurchaseSuccessfully(){
         bookPage.clickOnBookPageMenu();
         Assert.assertTrue(Utils.isElementPresent(By.xpath("//div[@class='master-wrapper-content']/div/div/div/div/h1")));
+    }
+
+    @Test
+    public void userShouldAbleToPurchaseProductSuccessfullyAsAGuest(){
+        bookPage.clickOnBookPageMenu();
+        cartPage.checkOutShoppingCart();
+        cartPage.clickOnCheckOutAsAGuest();
     }
 }
 

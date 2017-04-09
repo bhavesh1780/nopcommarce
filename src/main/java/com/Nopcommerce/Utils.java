@@ -78,7 +78,7 @@ public class Utils extends BasePage
 //    }
 
     //Reusable method to scrollPage
-    public static void scrollPage(By by, int x, int y){
+    public static void scrollPage(int x, int y){
         ((JavascriptExecutor)driver).executeScript("scroll(x,y)");
     }
 
@@ -223,5 +223,20 @@ public class Utils extends BasePage
     //Reusable method for AssertEqual
     public static void assertEqual(By by,String expected){
         Assert.assertEquals(driver.findElement(by).getText(),expected,"Actual Text is Not Matching With Expected Text");
+    }
+
+    //assertion by getting text from web location
+    public static void assertByGetText(By by, String expectedText, String errorMessage) {
+        Assert.assertEquals(getTextFromElement(by),expectedText,errorMessage);
+    }
+
+    //assertion by getting attribute value from web location
+    public static void assertByGetTextByAttribute(By by, String attributeValue, String expectedText,  String errorMessage) {
+        Assert.assertEquals(getTextByAttribute(by, attributeValue),expectedText,errorMessage);
+    }
+
+    //assertion by string variables
+    public static void assertByStringVariable( String actualText, String expectedText, String errorMessage) {
+        Assert.assertEquals(actualText, expectedText, errorMessage);
     }
 }

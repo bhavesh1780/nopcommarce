@@ -15,7 +15,7 @@ public class BaseTest extends BasePage
 
  @BeforeMethod
     public void openBrowser(){
-     driver = new FirefoxDriver();
+    driver = new FirefoxDriver();
     driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     driver.get("http://demo.nopcommerce.com/");
