@@ -10,7 +10,7 @@ public class CartPage extends Utils{
 
     public void checkOutShoppingCart() {
         //Click on Shopping Cart
-//        clickOnElement(By.linkText("shopping cart"));
+        clickOnElement(By.linkText("shopping cart"));
         //Select destination to get a shipping estimate
         selectText(By.id("CountryId"), "United Kingdom");
         //Click on Terms of service

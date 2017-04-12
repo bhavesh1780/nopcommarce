@@ -14,6 +14,7 @@ public class TestSuit extends BaseTest {
     LoginPage loginPage = new LoginPage();
     BookPage bookPage = new BookPage();
     CartPage cartPage = new CartPage();
+    CheckOutPage checkOutPage = new CheckOutPage();
 
 
     @Test
@@ -26,15 +27,19 @@ public class TestSuit extends BaseTest {
 
     @Test
     public void userShouldAbleToPurchaseSuccessfully(){
-        bookPage.clickOnBookPageMenu();
-        Assert.assertTrue(Utils.isElementPresent(By.xpath("//div[@class='master-wrapper-content']/div/div/div/div/h1")));
+        bookPage.selectAndAddBookToCart();
+        Assert.assertTrue(Utils.isElementPresent(By.linkText("shopping cart")));
     }
 
     @Test
     public void userShouldAbleToPurchaseProductSuccessfullyAsAGuest(){
-        bookPage.clickOnBookPageMenu();
+        bookPage.selectAndAddBookToCart();
         cartPage.checkOutShoppingCart();
         cartPage.clickOnCheckOutAsAGuest();
+        checkOutPage.enterCheckOutDetails();
+        Assert.assertTrue(Utils.isElementPresent(By.xpath("//strong[contains(.,'Your order has been successfully processed!')]")));
     }
+
+
 }
 

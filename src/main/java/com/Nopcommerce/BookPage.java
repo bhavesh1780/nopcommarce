@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
  */
 public class BookPage extends Utils {
 
-    public void clickOnBookPageMenu(){
-        //Click on Book Menu on Homepage
+        public void selectAndAddBookToCart(){
+
         clickOnElement(By.xpath("//div[@class='header-menu']/ul/li[5]"));
         //Click on Book Fahrenheit 451 by Ray Bradbury
         clickOnElement(By.xpath("//div[@class='item-box']/div[1]/div/h2"));
@@ -18,7 +18,6 @@ public class BookPage extends Utils {
         clickOnElement(By.id("add-to-cart-button-37"));
         //To clear click on Message Displayed on top of the page Product added to Shopping cart
         clickOnElement(By.xpath("//body/div[5]/span"));
-        //Click on Shopping Cart to go to shopping cart
-        clickOnElement(By.linkText("shopping cart"));
+
     }
 }

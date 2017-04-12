@@ -26,7 +26,7 @@ public class RegistrationPage extends Utils {
         System.out.println(email);
         // Typing company name
         typeText(By.xpath("//input[@id=\"Company\"]"),"Test");
-        // Clcik on the chekbox for 'Newsletter'
+        // Click on the chekbox for 'Newsletter'
         selectCheckbox(By.id("Newsletter"));
         // Typing the password
         typeText(By.xpath("//input[@id=\"Password\"]"),"Patel1");
