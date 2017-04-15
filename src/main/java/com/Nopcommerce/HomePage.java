@@ -63,6 +63,13 @@ public class HomePage extends Utils {
         Assert.assertTrue(driver.getCurrentUrl().contains("computers"),"We have not reached to Computers page");
     }
 
+    public void clickOnElectronicsCategory(){
+        //Click on Electronics Menu on Homepage
+        clickOnElement(By.xpath("//div[@class='header-menu']/ul/li[2]"));
+        //Verify if user is on Electronics page
+        Assert.assertTrue(driver.getCurrentUrl().contains("electronics"),"We have not reached to Electronics page");
+    }
+
     public void clickOnApparelCategory(){
         //Click on Apparel Menu on Homepage
         clickOnElement(By.linkText("Apparel"));

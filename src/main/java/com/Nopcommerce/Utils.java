@@ -239,4 +239,16 @@ public class Utils extends BasePage
     public static void assertByStringVariable( String actualText, String expectedText, String errorMessage) {
         Assert.assertEquals(actualText, expectedText, errorMessage);
     }
+
+    public static void getPrice(By by , By productNameby){
+        String price = getTextFromElement(by);
+        StringBuilder sb1 = new StringBuilder(price);
+        sb1.deleteCharAt(0);
+        String resultString = sb1.toString();
+        double converted_price = Double.parseDouble(resultString);
+        String productName = getTextFromElement(productNameby);
+        System.out.println("The Price for " + productName + " = " + converted_price);
+
+    }
+
 }

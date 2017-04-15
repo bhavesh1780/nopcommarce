@@ -15,6 +15,10 @@ public class TestSuit extends BaseTest {
     BookPage bookPage = new BookPage();
     CartPage cartPage = new CartPage();
     CheckOutPage checkOutPage = new CheckOutPage();
+    ApparelPage apparelPage = new ApparelPage();
+    ElectronicsPage electronicsPage = new ElectronicsPage();
+    CellPhonePage cellPhonePage = new CellPhonePage();
+
 
 
     @Test
@@ -40,6 +44,23 @@ public class TestSuit extends BaseTest {
         Assert.assertTrue(Utils.isElementPresent(By.xpath("//strong[contains(.,'Your order has been successfully processed!')]")));
     }
 
+    @Test
+    public void userShouldAbleToPurchaseApparel(){
+        homePage.clickOnApparelCategory();
+        apparelPage.selectApparelAndAddToCart();
+    }
 
+    @Test
+    public  void userShouldAbleToPurchaseElectronics(){
+        homePage.clickOnRegisterButton();
+        registrationPage.registerNewUSer();
+        homePage.clickOnElectronicsCategory();
+        electronicsPage.clickOnCellPhone();
+        cellPhonePage.getAllProductsFrfomTheCellphonePage();
+        cellPhonePage.selectCellPhonesAndAddToCart();
+        homePage.clickOnShoppingCart();
+        cartPage.checkProductsIntoCart();
+
+    }
 }
 

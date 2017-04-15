@@ -1,12 +1,30 @@
 package com.Nopcommerce;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+
+import java.util.List;
 
 /**
  * Created by Dell on 09/04/2017.
  */
 public class CartPage extends Utils{
+
+    public void checkProductsIntoCart(){
+        //
+        WebElement table = driver.findElement(By.xpath("//div[@class='table-wrapper']/table/tbody"));
+        List<WebElement> rows = table.findElements(By.tagName("tr"));
+        java.util.Iterator<WebElement> i = rows.iterator();
+        while(i.hasNext()) {
+            WebElement row = i.next();
+            System.out.println(row.getText());
+        }
+    }
+    public void checkIfCorrectProductHasBeenAddedToCart(String expectedproduct, String actualproduct){
+//        expectedproduct = ;
+
+    }
 
     public void checkOutShoppingCart() {
         //Click on Shopping Cart
