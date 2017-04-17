@@ -18,6 +18,7 @@ public class TestSuit extends BaseTest {
     ApparelPage apparelPage = new ApparelPage();
     ElectronicsPage electronicsPage = new ElectronicsPage();
     CellPhonePage cellPhonePage = new CellPhonePage();
+    GiftCardsPage giftCardsPage = new GiftCardsPage();
 
 
 
@@ -60,6 +61,15 @@ public class TestSuit extends BaseTest {
         cellPhonePage.selectCellPhonesAndAddToCart();
         homePage.clickOnShoppingCart();
         cartPage.checkProductsIntoCart();
+
+    }
+
+    @Test
+    public void userShouldAbleToEmailGiftCardToAFriend(){
+        homePage.clickOnRegisterButton();
+        registrationPage.registerNewUSer();
+        homePage.clickOnGiftCardCategory();
+        giftCardsPage.emailGiftCardToFriend();
 
     }
 }

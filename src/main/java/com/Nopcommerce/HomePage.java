@@ -91,4 +91,6 @@ public class HomePage extends Utils {
         //Verify if user is navigated to GiftCard page
         assertByGetText(By.xpath("//h1[contains(.,'Gift Cards')]"), "Gift Cards", "We  have not reached to Gift Cards Page");
     }
+
+
 }

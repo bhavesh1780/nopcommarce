@@ -21,7 +21,6 @@ public class ApparelPage extends Utils {
         clickOnElement(By.xpath("//div[2]/div/div[2]/div[3]/div[2]/input[2]"));
         //Click on notification bar to clear
         clickOnElement(By.xpath("//div[@id='bar-notification']/span"));
-        sleep(5);
         //Click on product to compare
         clickOnElement(By.xpath("//div[3]/div/div[2]/div[3]/div[2]/input[2]"));
         //Take a Screenshot of the product Comparision
