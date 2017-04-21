@@ -36,7 +36,7 @@ public class CellPhonePage extends Utils {
 
     }
 
-    public void getAllProductsFrfomTheCellphonePage() {
+    public void getAllProductsFromTheCellphonePage() {
         WebElement itemgrid = driver.findElement(By.className("item-grid"));
         List<WebElement> divs = itemgrid.findElements(By.xpath("//div[@class='item-box']"));
         java.util.Iterator<WebElement> i = divs.iterator();

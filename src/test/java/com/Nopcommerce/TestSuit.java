@@ -57,7 +57,7 @@ public class TestSuit extends BaseTest {
         registrationPage.registerNewUSer();
         homePage.clickOnElectronicsCategory();
         electronicsPage.clickOnCellPhone();
-        cellPhonePage.getAllProductsFrfomTheCellphonePage();
+        cellPhonePage.getAllProductsFromTheCellphonePage();
         cellPhonePage.selectCellPhonesAndAddToCart();
         homePage.clickOnShoppingCart();
         cartPage.checkProductsIntoCart();
