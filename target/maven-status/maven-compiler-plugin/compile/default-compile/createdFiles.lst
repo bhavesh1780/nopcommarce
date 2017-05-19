@@ -1,0 +1,12 @@
+com\Nopcommerce\BookPage.class
+com\Nopcommerce\GiftCardsPage.class
+com\Nopcommerce\HomePage.class
+com\Nopcommerce\LoginPage.class
+com\Nopcommerce\RegistrationPage.class
+com\Nopcommerce\CartPage.class
+com\Nopcommerce\Utils.class
+com\Nopcommerce\ApparelPage.class
+com\Nopcommerce\BasePage.class
+com\Nopcommerce\CellPhonePage.class
+com\Nopcommerce\ElectronicsPage.class
+com\Nopcommerce\CheckOutPage.class
